@@ -39,7 +39,7 @@ public class GUIMain extends JFrame {
         menuBar = new JMenuBar();
         menu1 = new JMenu("Archivo");
         jmI1 = new JMenuItem("Abrir");
-        jmI2 = new JMenuItem("Adm. Cliente");//Agregado
+        jmI2 = new JMenuItem("Administrador");//Agregado
 
         menu1.add(jmI1);
         menu1.add(jmI2);//Agregado

@@ -14,7 +14,7 @@ import javax.swing.JPanel;
  * <ol><li>WARNING_MESSAGE</li><li>ERROR_MESSAGE</li><li>PLAIN_MESSAGE</li><li>INFORMATION_MESSAGE</li>
  * <li>QUESTION_MESSAGE</li></ol>
  *
- * @see <a href = "https://github.com/davidmp" />Aqui Github</a>
+ * @see <a href = "https://github.com/Roy-Alex18" />Aqui Github</a>
  * @return No hay retorno de metodos
  */
 public class MsgBox {

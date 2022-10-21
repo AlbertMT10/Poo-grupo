@@ -14,7 +14,9 @@ pe\edu\upeu\app\util\ErrorLogger.class
 pe\edu\upeu\app\components\MyButton$1.class
 pe\edu\upeu\app\gui\MainCliente$2.class
 pe\edu\upeu\app\modelo\ClienteTO.class
+pe\edu\upeu\app\gui\MainCliente$7.class
 pe\edu\upeu\app\util\MsgBox.class
+pe\edu\upeu\app\gui\MainCliente$9.class
 pe\edu\upeu\app\util\UtilsX.class
 pe\edu\upeu\app\components\MyButton.class
 pe\edu\upeu\app\dao\conx\Conn.class
@@ -22,3 +24,4 @@ pe\edu\upeu\app\gui\MainCliente$5.class
 pe\edu\upeu\app\dao\ClienteDAO.class
 pe\edu\upeu\app\gui\GUIMain.class
 pe\edu\upeu\app\gui\MainCliente$3.class
+pe\edu\upeu\app\gui\MainCliente$8.class
