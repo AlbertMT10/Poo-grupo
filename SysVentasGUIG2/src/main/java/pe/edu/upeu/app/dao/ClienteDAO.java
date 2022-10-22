@@ -41,7 +41,7 @@ public class ClienteDAO implements ClienteDaoI {
         int rsId = 0;
         String[] returns = {"dniruc"};
 
-        String sql = "INSERT INTO cliente(dniruc, nombrers, tipo) "
+        String sql = "INSERT INTO cliente(dniruc, nombrers, tipo,Costo) "
                 + " VALUES(?,?,?)";
         int i = 0;
         try {
@@ -49,6 +49,7 @@ public class ClienteDAO implements ClienteDaoI {
             ps.setString(++i, d.getDniruc());
             ps.setString(++i, d.getNombresrs());
             ps.setString(++i, d.getTipo());
+            ps.setString(++i, d.getCosto());
             rsId = ps.executeUpdate();// 0 no o 1 si commit
             try ( ResultSet rs = ps.getGeneratedKeys()) {
                 if (rs.next()) {
@@ -70,13 +71,15 @@ public class ClienteDAO implements ClienteDaoI {
         String sql = "UPDATE cliente SET "
                 + "nombrers=?, "
                 + "tipo=? "
-                + "WHERE dniruc=?";
+                + "WHERE dniruc=?"
+                + "costo=?";
         int i = 0;
         try {
             ps = connection.prepareStatement(sql);
             ps.setString(++i, d.getNombresrs());
             ps.setString(++i, d.getTipo());
             ps.setString(++i, d.getDniruc());
+            ps.setString(++i, d.getCosto());
             comit = ps.executeUpdate();
         } catch (SQLException ex) {
             log.log(Level.SEVERE, "update", ex);
@@ -121,6 +124,7 @@ public class ClienteDAO implements ClienteDaoI {
                 cli.setDniruc(rs.getString("dniruc"));
                 cli.setNombresrs(rs.getString("nombrers"));
                 cli.setTipo(rs.getString("tipo"));
+                cli.setCosto(rs.getString("costo"));
                 listarclientes.add(cli);
             }
         } catch (SQLException e) {
@@ -142,6 +146,7 @@ public class ClienteDAO implements ClienteDaoI {
                 cliente.setDniruc(rs.getString("dniruc"));
                 cliente.setNombresrs(rs.getString("nombrers"));
                 cliente.setTipo(rs.getString("tipo"));
+                cliente.setCosto(rs.getString("costo"));
             }
         } catch (SQLException e) {
             System.out.println(e.toString());

@@ -22,28 +22,25 @@ public class Login extends javax.swing.JFrame {
     BufferedImage image;
     UtilsX obj = new UtilsX();
     Image imagex;
+    Image imagex2;
+
     public Login() {
-        
-        
+
         initComponents();
 
-        
-        this.setTitle("Login");
+        this.setTitle("iinicio de secion");
         try {
-            image = ImageIO.read(obj.getFile("secrecy-icon.png"));
-        } catch (Exception ex) {
+         
+            image = ImageIO.read(obj.getFile("pizza.png"));
+            imagex2 = ImageIO.read(obj.getFile("pizzaa.png"));
+        }
+        catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-        this.setIconImage(image);
-        this.setResizable(false);
-        this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(new Dimension(screenSize.width/2, (screenSize.height-36)/2));  
-        this.setLocationRelativeTo(null);
-        Image scaleImage = image.getScaledInstance(lbnImage.getWidth(),
-        lbnImage.getHeight(), Image.SCALE_DEFAULT);
-        lbnImage.setIcon(new ImageIcon(scaleImage));
-        this.repaint();
+          Image scaleImage = imagex2.getScaledInstance(jLabel4.getWidth(),
+        jLabel4.getHeight(), Image.SCALE_DEFAULT);
+        jLabel4.setIcon(new ImageIcon(scaleImage));
+
     }
 
     /**
@@ -55,9 +52,8 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        lbnImage = new javax.swing.JLabel();
-        fondoPanel1 = new pe.edu.upeu.app.components.FondoPanel();
+        jPanel1 = new javax.swing.JPanel();
+        fondoPanel2 = new pe.edu.upeu.app.components.FondoPanel();
         panelBorder1 = new pe.edu.upeu.app.components.PanelBorder();
         jLabel1 = new javax.swing.JLabel();
         myButton1 = new pe.edu.upeu.app.components.MyButton();
@@ -65,36 +61,19 @@ public class Login extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbnImage, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(181, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbnImage, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Login");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         panelBorder1.add(jLabel1);
-        jLabel1.setBounds(10, 20, 130, 20);
+        jLabel1.setBounds(70, 20, 150, 40);
 
         myButton1.setText("Ingresar");
         myButton1.setColor(new java.awt.Color(255, 102, 102));
@@ -104,58 +83,76 @@ public class Login extends javax.swing.JFrame {
             }
         });
         panelBorder1.add(myButton1);
-        myButton1.setBounds(10, 170, 130, 22);
+        myButton1.setBounds(80, 220, 130, 21);
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel2.setText("Usuario");
         panelBorder1.add(jLabel2);
-        jLabel2.setBounds(10, 50, 140, 16);
+        jLabel2.setBounds(20, 50, 140, 30);
         panelBorder1.add(jTextField1);
-        jTextField1.setBounds(10, 70, 130, 22);
+        jTextField1.setBounds(20, 90, 250, 30);
 
-        jLabel3.setText("Password");
+        jLabel3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel3.setText("Contraseña");
         panelBorder1.add(jLabel3);
-        jLabel3.setBounds(10, 100, 130, 16);
+        jLabel3.setBounds(20, 130, 130, 30);
 
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setText("**********");
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
         panelBorder1.add(jPasswordField1);
-        jPasswordField1.setBounds(10, 120, 130, 22);
+        jPasswordField1.setBounds(20, 160, 250, 30);
 
-        javax.swing.GroupLayout fondoPanel1Layout = new javax.swing.GroupLayout(fondoPanel1);
-        fondoPanel1.setLayout(fondoPanel1Layout);
-        fondoPanel1Layout.setHorizontalGroup(
-            fondoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(fondoPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+        jLabel4.setText("jLabel4");
+
+        javax.swing.GroupLayout fondoPanel2Layout = new javax.swing.GroupLayout(fondoPanel2);
+        fondoPanel2.setLayout(fondoPanel2Layout);
+        fondoPanel2Layout.setHorizontalGroup(
+            fondoPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoPanel2Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        fondoPanel1Layout.setVerticalGroup(
-            fondoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoPanel1Layout.createSequentialGroup()
-                .addContainerGap(55, Short.MAX_VALUE)
-                .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
+        fondoPanel2Layout.setVerticalGroup(
+            fondoPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(fondoPanel2Layout.createSequentialGroup()
+                .addGroup(fondoPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(fondoPanel2Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(fondoPanel2Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fondoPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fondoPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(fondoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(fondoPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -163,24 +160,28 @@ public class Login extends javax.swing.JFrame {
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
         // TODO add your handling code here:
-                GUIMain gm=new GUIMain();
+        GUIMain gm = new GUIMain();
         gm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_myButton1ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private pe.edu.upeu.app.components.FondoPanel fondoPanel1;
+    private pe.edu.upeu.app.components.FondoPanel fondoPanel2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel lbnImage;
     private pe.edu.upeu.app.components.MyButton myButton1;
     private pe.edu.upeu.app.components.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables

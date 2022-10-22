@@ -16,7 +16,7 @@ public interface ClienteDaoI {
     public int create(ClienteTO d);
 
     public int update(ClienteTO d);
-
+    
     public int delete(String id) throws Exception;
 
     public List<ClienteTO> listCmb(String filter);

@@ -39,7 +39,7 @@ public class GUIMain extends JFrame {
         menuBar = new JMenuBar();
         menu1 = new JMenu("Archivo");
         jmI1 = new JMenuItem("Abrir");
-        jmI2 = new JMenuItem("Administrador");//Agregado
+        jmI2 = new JMenuItem("Admistrador");//Agregado
 
         menu1.add(jmI1);
         menu1.add(jmI2);//Agregado
@@ -96,7 +96,7 @@ public class GUIMain extends JFrame {
                 scrollPane = new JScrollPane(mc);
                 scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
                 scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-                jtpane.add("Adm. Cliente",scrollPane);                
+                jtpane.add("Administrador",scrollPane);                
                 //jtpane.add("Prueba", mc);
                 //jtpane.add("dd", new JPanel());  
                 contai.add(BorderLayout.CENTER, jtpane);
