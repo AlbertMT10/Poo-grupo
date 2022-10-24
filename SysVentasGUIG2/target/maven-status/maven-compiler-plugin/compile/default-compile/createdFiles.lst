@@ -10,7 +10,6 @@ pe\edu\upeu\app\components\FondoPanel.class
 pe\edu\upeu\app\components\PanelBorder.class
 pe\edu\upeu\app\gui\TIPOCLXIENTE.class
 pe\edu\upeu\app\SysVentasGUIG2.class
-.netbeans_automatic_build
 pe\edu\upeu\app\util\ErrorLogger.class
 pe\edu\upeu\app\components\MyButton$1.class
 pe\edu\upeu\app\gui\MainCliente$2.class
@@ -21,6 +20,7 @@ pe\edu\upeu\app\gui\MainCliente$9.class
 pe\edu\upeu\app\util\UtilsX.class
 pe\edu\upeu\app\components\MyButton.class
 pe\edu\upeu\app\gui\Login$2.class
+pe\edu\upeu\app\gui\MainCliente$10.class
 pe\edu\upeu\app\dao\conx\Conn.class
 pe\edu\upeu\app\gui\MainCliente$5.class
 pe\edu\upeu\app\dao\ClienteDAO.class
